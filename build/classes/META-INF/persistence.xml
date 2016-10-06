@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	<persistence-unit name="debatappEntities" transaction-type="RESOURCE_LOCAL">
+		<class>com.debappte.entidad.Usuario</class>
+		<class>com.debappte.entidad.Debate</class>
+		<class>com.debappte.entidad.Modelo</class>
+		<class>com.debappte.entidad.Etapa</class>
+		<class>com.debappte.entidad.Pregunta</class>
+		<class>com.debappte.entidad.Posicion</class>
+		<class>com.debappte.entidad.Participante</class>
+		<properties>
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/debateri"/>
+			<property name="javax.persistence.jdbc.user" value="root"/>
+			<property name="javax.persistence.jdbc.password" value="admin"/>
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+		</properties>
+	</persistence-unit>
+</persistence>
