@@ -3,6 +3,7 @@ package com.debappte.entidad;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.*;
 
@@ -21,9 +22,11 @@ public class Debate implements Serializable {
 	@ManyToOne	
 	private Modelo modelo;
 	@OneToMany(cascade= CascadeType.ALL)
-	private ArrayList<Posicion> posiciones;
+	private List<Posicion> posiciones;
 	@OneToMany(cascade=CascadeType.ALL)
-	private ArrayList<Pregunta> preguntas;
+	private List<Pregunta> preguntas;
+	@OneToMany(mappedBy="debateAsignado",targetEntity=Participante.class, cascade= CascadeType.ALL)
+	private List<Participante> participantes;
 	
 	
 	private static final long serialVersionUID = 1L;
@@ -32,7 +35,7 @@ public class Debate implements Serializable {
 		super();
 	}
 
-	public ArrayList<Posicion> getPosiciones() {
+	public List<Posicion> getPosiciones() {
 		return posiciones;
 	}
 
@@ -40,12 +43,20 @@ public class Debate implements Serializable {
 		this.posiciones = posiciones;
 	}
 
-	public ArrayList<Pregunta> getPreguntas() {
+	public List<Pregunta> getPreguntas() {
 		return preguntas;
 	}
 
 	public void setPreguntas(ArrayList<Pregunta> preguntas) {
 		this.preguntas = preguntas;
+	}
+
+	public List<Participante> getParticipantes() {
+		return participantes;
+	}
+
+	public void setParticipantes(List<Participante> participantes) {
+		this.participantes = participantes;
 	}
    
 }

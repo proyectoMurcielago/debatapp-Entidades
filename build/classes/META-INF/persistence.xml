@@ -8,6 +8,12 @@
 		<class>com.debappte.entidad.Pregunta</class>
 		<class>com.debappte.entidad.Posicion</class>
 		<class>com.debappte.entidad.Participante</class>
+		<class>com.debappte.entidad.Debatiente</class>
+		<class>com.debappte.entidad.Asesor</class>
+		<class>com.debappte.entidad.Observador</class>
+		<class>com.debappte.entidad.AreasAEvaluar</class>
+		<class>com.debappte.entidad.Rubro</class>
+		<class>com.debappte.entidad.Profesor</class>
 		<properties>
 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/debateri"/>
 			<property name="javax.persistence.jdbc.user" value="root"/>

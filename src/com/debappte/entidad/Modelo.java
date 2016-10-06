@@ -1,7 +1,7 @@
 package com.debappte.entidad;
 
 import java.io.Serializable;
-import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.*;
 
@@ -16,7 +16,7 @@ public class Modelo implements Serializable {
 	private long id;
 	private String nombre;
 	@OneToMany(orphanRemoval= true)
-	private ArrayList<Etapa> etapas;
+	private List<Etapa> etapas;
 	
 	private static final long serialVersionUID = 1L;
 
@@ -40,11 +40,11 @@ public class Modelo implements Serializable {
 		this.nombre = nombre;
 	}
 
-	public ArrayList<Etapa> getEtapas() {
+	public List<Etapa> getEtapas() {
 		return etapas;
 	}
 
-	public void setEtapas(ArrayList<Etapa> etapas) {
+	public void setEtapas(List<Etapa> etapas) {
 		this.etapas = etapas;
 	}
 	
