@@ -14,6 +14,8 @@ public class Etapa implements Serializable {
 	private String nombre;
 	private int duracionMinima,duracionMaxima;
 	private int reiteraciones;
+	@ManyToOne @JoinColumn(name="fk_modelo")
+	private Modelo modelo;
 	
 	private static final long serialVersionUID = 1L;
 

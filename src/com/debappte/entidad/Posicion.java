@@ -22,5 +22,21 @@ public class Posicion implements Serializable {
 	public Posicion() {
 		super();
 	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public Debate getDebate() {
+		return debate;
+	}
+
+	public void setDebate(Debate debate) {
+		this.debate = debate;
+	}
    
 }

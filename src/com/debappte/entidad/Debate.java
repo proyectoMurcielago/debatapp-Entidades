@@ -1,4 +1,4 @@
-package com.debappte.entidad;
+	package com.debappte.entidad;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -19,7 +19,7 @@ public class Debate implements Serializable {
 	private long id;
 	private String nombre;
 	private Date fechaInicial;
-	@ManyToOne	
+	@ManyToOne(cascade=CascadeType.ALL)
 	private Modelo modelo;
 	@OneToMany(cascade= CascadeType.ALL)
 	private List<Posicion> posiciones;
@@ -27,7 +27,6 @@ public class Debate implements Serializable {
 	private List<Pregunta> preguntas;
 	@OneToMany(mappedBy="debateAsignado",targetEntity=Participante.class, cascade= CascadeType.ALL)
 	private List<Participante> participantes;
-	
 	
 	private static final long serialVersionUID = 1L;
 
@@ -39,7 +38,7 @@ public class Debate implements Serializable {
 		return posiciones;
 	}
 
-	public void setPosiciones(ArrayList<Posicion> posiciones) {
+	public void setPosiciones(List<Posicion> posiciones) {
 		this.posiciones = posiciones;
 	}
 
@@ -57,6 +56,30 @@ public class Debate implements Serializable {
 
 	public void setParticipantes(List<Participante> participantes) {
 		this.participantes = participantes;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public Date getFechaInicial() {
+		return fechaInicial;
+	}
+
+	public void setFechaInicial(Date fechaInicial) {
+		this.fechaInicial = fechaInicial;
+	}
+
+	public Modelo getModelo() {
+		return modelo;
+	}
+
+	public void setModelo(Modelo modelo) {
+		this.modelo = modelo;
 	}
    
 }

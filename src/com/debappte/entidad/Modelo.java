@@ -15,7 +15,7 @@ public class Modelo implements Serializable {
 	@Id @GeneratedValue
 	private long id;
 	private String nombre;
-	@OneToMany(orphanRemoval= true)
+	@OneToMany(mappedBy="modelo", targetEntity=Etapa.class,cascade= CascadeType.ALL)
 	private List<Etapa> etapas;
 	
 	private static final long serialVersionUID = 1L;
@@ -28,15 +28,11 @@ public class Modelo implements Serializable {
 		return id;
 	}
 
-	public void setId(long id) {
-		this.id = id;
-	}
-
-	private String getNombre() {
+	public String getNombre() {
 		return nombre;
 	}
 
-	private void setNombre(String nombre) {
+	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
 
