@@ -14,6 +14,7 @@
 		<class>com.debappte.entidad.AreasAEvaluar</class>
 		<class>com.debappte.entidad.Rubro</class>
 		<class>com.debappte.entidad.Profesor</class>
+		<class>com.debappte.entidad.Moderador</class>
 		<properties>
 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/debateri"/>
 			<property name="javax.persistence.jdbc.user" value="root"/>
