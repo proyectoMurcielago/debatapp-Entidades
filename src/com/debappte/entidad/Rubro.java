@@ -6,13 +6,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * Entity implementation class for Entity: Rubro
  *
  */
 @Entity
-
+@XmlRootElement
 public class Rubro implements Serializable {
 	@Id @GeneratedValue
 	private long id;

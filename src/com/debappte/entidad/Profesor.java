@@ -5,6 +5,7 @@ import java.io.Serializable;
 import java.util.List;
 
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * Entity implementation class for Entity: Profesor
@@ -12,6 +13,7 @@ import javax.persistence.*;
  */
 @Entity
 @Inheritance(strategy=InheritanceType.TABLE_PER_CLASS)
+@XmlRootElement
 public class Profesor extends Usuario implements Serializable {
 	@OneToMany
 	private List<Rubro> rubros;

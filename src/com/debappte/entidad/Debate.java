@@ -6,13 +6,14 @@ import java.util.Date;
 import java.util.List;
 
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * Entity implementation class for Entity: Debate
  *
  */
 @Entity
-
+@XmlRootElement
 public class Debate implements Serializable {
 
 	@Id @GeneratedValue

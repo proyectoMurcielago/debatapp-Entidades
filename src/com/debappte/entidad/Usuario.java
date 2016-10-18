@@ -2,13 +2,14 @@ package com.debappte.entidad;
 
 import java.io.Serializable;
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * Entity implementation class for Entity: Usuario
  *
  */
 @Entity
-
+@XmlRootElement
 public class Usuario implements Serializable {
 	@Id @GeneratedValue
 	private long id;

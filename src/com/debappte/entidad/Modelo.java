@@ -4,12 +4,14 @@ import java.io.Serializable;
 import java.util.List;
 
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * Entity implementation class for Entity: Modelo
  *
  */
 @Entity
+@XmlRootElement
 public class Modelo implements Serializable {
 	
 	@Id @GeneratedValue
