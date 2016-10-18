@@ -2,13 +2,14 @@ package com.debappte.entidad;
 
 import java.io.Serializable;
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * Entity implementation class for Entity: AreasAEvaluar
  *
  */
 @Entity
-
+@XmlRootElement
 public class AreasAEvaluar implements Serializable {
 
 	   
