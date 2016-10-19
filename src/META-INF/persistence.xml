@@ -16,13 +16,13 @@
 		<class>com.debappte.entidad.Profesor</class>
 		<class>com.debappte.entidad.Moderador</class>
 		<properties>
-			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/debateri"/>
-			<property name="javax.persistence.jdbc.user" value="root"/>
-			<property name="javax.persistence.jdbc.password" value="admin"/>
-			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
             <property name="hibernate.show_sql" value="true" />
             <property name="hibernate.hbm2ddl.auto" value="update" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://us-cdbr-azure-east-c.cloudapp.net/debateapp"/>
+            <property name="javax.persistence.jdbc.user" value="bdbf06b4a8f28e"/>
+            <property name="javax.persistence.jdbc.password" value="4d08af0c"/>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
 			</properties>	
 	</persistence-unit>
 </persistence>
