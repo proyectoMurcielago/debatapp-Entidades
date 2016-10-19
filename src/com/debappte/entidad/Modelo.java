@@ -1,22 +1,24 @@
 package com.debappte.entidad;
 
 import java.io.Serializable;
-import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * Entity implementation class for Entity: Modelo
  *
  */
 @Entity
+@XmlRootElement
 public class Modelo implements Serializable {
 	
 	@Id @GeneratedValue
 	private long id;
 	private String nombre;
-	@OneToMany(orphanRemoval= true)
-	private ArrayList<Etapa> etapas;
+	@OneToMany(mappedBy="modelo", targetEntity=Etapa.class,cascade= CascadeType.ALL)
+	private List<Etapa> etapas;
 	
 	private static final long serialVersionUID = 1L;
 
@@ -28,23 +30,19 @@ public class Modelo implements Serializable {
 		return id;
 	}
 
-	public void setId(long id) {
-		this.id = id;
-	}
-
-	private String getNombre() {
+	public String getNombre() {
 		return nombre;
 	}
 
-	private void setNombre(String nombre) {
+	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
 
-	public ArrayList<Etapa> getEtapas() {
+	public List<Etapa> getEtapas() {
 		return etapas;
 	}
 
-	public void setEtapas(ArrayList<Etapa> etapas) {
+	public void setEtapas(List<Etapa> etapas) {
 		this.etapas = etapas;
 	}
 	

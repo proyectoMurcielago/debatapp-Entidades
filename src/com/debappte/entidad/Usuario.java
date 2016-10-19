@@ -2,17 +2,17 @@ package com.debappte.entidad;
 
 import java.io.Serializable;
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * Entity implementation class for Entity: Usuario
  *
  */
 @Entity
-
+@XmlRootElement
 public class Usuario implements Serializable {
 	@Id @GeneratedValue
-	private
-	long id;
+	private long id;
 	private String nombre;
 	private String primerApellido;
 	private String segundoApellido;
@@ -21,6 +21,15 @@ public class Usuario implements Serializable {
 	
 	
 	private static final long serialVersionUID = 1L;
+	
+	public Usuario(String nombre, String primerApellido, String segundoApellido, 
+			String correo, String contrasena){
+		this.nombre = nombre;
+		this.primerApellido = primerApellido;
+		this.segundoApellido = segundoApellido;
+		this.correoElectronico = correo;
+		this.contrasena = contrasena;
+	}
 
 	public Usuario() {
 		super();

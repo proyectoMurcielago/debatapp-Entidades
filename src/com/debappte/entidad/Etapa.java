@@ -2,18 +2,22 @@ package com.debappte.entidad;
 
 import java.io.Serializable;
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * Entity implementation class for Entity: Etapa
  *
  */
 @Entity
+@XmlRootElement
 public class Etapa implements Serializable {
 	@Id @GeneratedValue
 	private long id;
 	private String nombre;
 	private int duracionMinima,duracionMaxima;
 	private int reiteraciones;
+	@ManyToOne @JoinColumn(name="fk_modelo")
+	private Modelo modelo;
 	
 	private static final long serialVersionUID = 1L;
 
